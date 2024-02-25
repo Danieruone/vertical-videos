@@ -19,7 +19,7 @@ class VideoScrollableView extends StatelessWidget {
           children: [
             // TODO: videoplayer + gradient
             Positioned(
-                bottom: 40, right: 20, child: VideoButtons(video: videPost))
+                bottom: 100, right: 20, child: VideoButtons(video: videPost))
           ],
         );
       },
