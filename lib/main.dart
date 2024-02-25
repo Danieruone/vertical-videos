@@ -12,16 +12,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => DiscoverProvider())],
+      providers: [
+        ChangeNotifierProvider(
+            lazy: false, create: (_) => DiscoverProvider()..loadNextPage())
+      ],
       child: MaterialApp(
         title: 'Toktik',
         debugShowCheckedModeBanner: false,
         theme: AppTheme().getTheme(),
-        home: Scaffold(
-          appBar: AppBar(
-            title: const Text('Material App Bar'),
-          ),
-          body: const DiscoverScreen(),
+        home: const Scaffold(
+          body: DiscoverScreen(),
         ),
       ),
     );
