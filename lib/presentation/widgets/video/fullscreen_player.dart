@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vertical_videos/presentation/widgets/video/gradient_background.dart';
 import 'package:video_player/video_player.dart';
 
 class FullScreenPlayer extends StatefulWidget {
@@ -54,7 +55,7 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
             aspectRatio: controller.value.aspectRatio,
             child: Stack(children: [
               VideoPlayer(controller),
-              // TODO: Add gradient
+              const GradientBackground(),
               Positioned(
                 bottom: 70,
                 left: 20,
